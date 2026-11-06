@@ -51,6 +51,7 @@ function saveProducts() {
   localStorage.setItem("shopora-products", JSON.stringify(products));
 }
 
+
 function renderProducts() {
   const search = searchInput.value.toLowerCase();
 
@@ -66,7 +67,11 @@ function renderProducts() {
 
   productGrid.innerHTML = filtered.length
     ? filtered.map((product) => `
-      <article class="product-card">
+      <article
+        class="product-card"
+        onclick="openProduct(${product.id})"
+        style="cursor:pointer"
+      >
         <div class="product-image">
           <span class="product-badge">SPECIAL OFFER</span>
           <img src="${product.image}" alt="${product.name}">
@@ -78,11 +83,18 @@ function renderProducts() {
           <p class="product-description">${product.description}</p>
 
           <div class="product-prices">
-            <span class="current-price">${formatPrice(product.price)}</span>
-            <span class="old-price">${formatPrice(product.originalPrice)}</span>
+            <span class="current-price">
+              ${formatPrice(product.price)}
+            </span>
+            <span class="old-price">
+              ${formatPrice(product.originalPrice)}
+            </span>
           </div>
 
-          <button class="add-cart" onclick="addToCart(${product.id})">
+          <button
+            class="add-cart"
+            onclick="event.stopPropagation(); addToCart(${product.id})"
+          >
             Add to Cart
           </button>
         </div>
@@ -92,6 +104,11 @@ function renderProducts() {
 
   renderTestSelector();
 }
+
+function openProduct(id) {
+  window.location.href = `product.html?id=${id}`;
+}
+
 
 function renderTestSelector() {
   const selected = testProduct.value;

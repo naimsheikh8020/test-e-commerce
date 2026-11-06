@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wireless Headphones - Shopora</title>
+  <meta name="description" content="Premium wireless headphones with immersive sound.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Shop<span>ora.</span></a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#about">About</a>
+    </nav>
+
+    <a href="index.html" class="back-link">← Back to Store</a>
+  </header>
+
+  <main class="details-container" id="productDetails">
+
+    <div class="details-grid">
+
+      <!-- Product Image -->
+      <div class="details-image">
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+          alt="Wireless Headphones"
+        >
+      </div>
+
+      <!-- Product Information -->
+      <div class="details-info">
+
+        <span class="product-category">Electronics</span>
+
+        <h1>Wireless Headphones</h1>
+
+        <p class="details-description">
+          Experience premium sound quality with these wireless headphones.
+          Designed for comfort, deep bass, clear audio, and an immersive
+          listening experience. Perfect for music, gaming and everyday use.
+        </p>
+
+        <div class="details-price">
+          <span class="current-price" id="productPrice">
+            ৳2,000
+          </span>
+
+          <span class="old-price">
+            ৳5,500
+          </span>
+        </div>
+
+        <div class="stock-status">
+          ● In Stock
+        </div>
+
+        <button class="details-add-cart" id="detailsAddCart">
+          Add to Cart
+        </button>
+
+        <div class="details-features">
+          <p>✓ Premium sound quality</p>
+          <p>✓ Comfortable wireless design</p>
+          <p>✓ Quality guaranteed</p>
+          <p>✓ Customer support available</p>
+        </div>
+
+        <!-- Product details for testing -->
+        <div class="product-meta">
+          <p><strong>Product ID:</strong> DD-001</p>
+          <p><strong>Brand:</strong> Shopora</p>
+          <p><strong>Availability:</strong> In Stock</p>
+          <p><strong>Currency:</strong> BDT</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="about">
+    <a href="index.html" class="logo">Shop<span>ora.</span></a>
+    <p>Quality products. Better shopping.</p>
+    <p>© <span id="year"></span> Shopora. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

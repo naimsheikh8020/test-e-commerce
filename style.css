@@ -464,3 +464,134 @@ footer p {
     width: 100%;
   }
 }
+
+/* Product details page */
+
+.back-link {
+  text-decoration: none;
+  color: #52525b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: #f97316;
+}
+
+.details-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 75px 25px;
+  min-height: 65vh;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.details-image {
+  background: #f4f4f5;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-info .product-category {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.details-info h1 {
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1.5px;
+  margin-bottom: 15px;
+}
+
+.details-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #71717a;
+  margin-bottom: 25px;
+}
+
+.details-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.details-price .current-price {
+  font-size: 34px;
+}
+
+.details-price .old-price {
+  font-size: 16px;
+}
+
+.stock-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #16a34a;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.details-add-cart {
+  width: 100%;
+  padding: 16px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.details-add-cart:hover {
+  background: #ea580c;
+}
+
+.details-features {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: grid;
+  gap: 13px;
+  color: #71717a;
+  font-size: 13px;
+}
+
+.details-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.details-not-found a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #f97316;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .details-container {
+    padding: 35px 20px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
